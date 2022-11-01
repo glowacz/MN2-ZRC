@@ -15,9 +15,11 @@ x = ones(n, 1);
 xN = ones(n, 1);
 
 % iteration matrices
+tic;
 [BJ, CJ] = itmatrix(ciA, vicA, b, n);
+toc
 
-
+tic;
 % Jacobi iterational method
 for k = 1:I
     for i = 1:n
@@ -35,3 +37,4 @@ for k = 1:I
     end
     x = xN;
 end
+toc
